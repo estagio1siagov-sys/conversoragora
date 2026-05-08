@@ -1,0 +1,112 @@
+2026-05-08 13:00:39,026 - INFO - Conversor Docling inicializado com sucesso.
+2026-05-08 13:00:39,032 - INFO - Validador Gemini inicializado com modelo: gemini-1.5-flash
+2026-05-08 13:00:39,102 - INFO - Iniciando conversão: tmp0bhxucgq.pdf
+2026-05-08 13:00:39,123 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2026-05-08 13:00:39,159 - INFO - Going to convert document batch...
+2026-05-08 13:00:39,163 - INFO - Initializing pipeline for StandardPdfPipeline with options hash 80a8a1322ca5ef46817c7adbf875fff6
+2026-05-08 13:00:39,210 - INFO - Loading plugin 'docling_defaults'
+2026-05-08 13:00:39,223 - INFO - Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+2026-05-08 13:00:39,261 - INFO - Loading plugin 'docling_defaults'
+2026-05-08 13:00:39,308 - INFO - Registered ocr engines: ['auto', 'easyocr', 'kserve_v2_ocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2026-05-08 13:00:40,126 - INFO - Accelerator device: 'cpu'
+2026-05-08 13:00:41,054 - INFO - Auto OCR model selected rapidocr with onnxruntime.
+2026-05-08 13:00:41,078 - INFO - Loading plugin 'docling_defaults'
+2026-05-08 13:00:41,092 - INFO - Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+2026-05-08 13:00:41,102 - INFO - Accelerator device: 'cpu'
+2026-05-08 13:00:42,043 - INFO - HTTP Request: GET https://huggingface.co/api/models/docling-project/docling-layout-heron/revision/main "HTTP/1.1 200 OK"
+2026-05-08 13:00:43,168 - INFO - Loading plugin 'docling_defaults'
+2026-05-08 13:00:43,175 - INFO - Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2', 'granite_vision_table']
+2026-05-08 13:00:43,388 - INFO - HTTP Request: GET https://huggingface.co/api/models/docling-project/docling-models/revision/v2.3.0 "HTTP/1.1 200 OK"
+2026-05-08 13:00:43,479 - INFO - Accelerator device: 'cpu'
+2026-05-08 13:00:44,614 - INFO - Processing document tmp0bhxucgq.pdf
+2026-05-08 13:10:48,898 - INFO - Iniciando conversão: tmp21k89eh6.pdf
+2026-05-08 13:10:48,935 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2026-05-08 13:10:48,962 - INFO - Going to convert document batch...
+2026-05-08 13:10:48,969 - INFO - Processing document tmp21k89eh6.pdf
+2026-05-08 13:13:18,424 - INFO - Iniciando conversão: tmpklwllc62.pdf
+2026-05-08 13:13:18,434 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2026-05-08 13:13:18,449 - INFO - Going to convert document batch...
+2026-05-08 13:13:18,455 - INFO - Processing document tmpklwllc62.pdf
+2026-05-08 13:16:07,635 - INFO - Finished converting document tmpklwllc62.pdf in 169.21 sec.
+2026-05-08 13:16:07,888 - INFO - Conversão concluída: 1 página(s).
+2026-05-08 13:16:08,554 - INFO - Finished converting document tmp0bhxucgq.pdf in 929.45 sec.
+2026-05-08 13:16:08,794 - INFO - Conversão concluída: 13 página(s).
+2026-05-08 13:16:12,958 - ERROR - Erro na validação Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B2800:3f0:4004:813::200a%5D:443 {grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.", grpc_status:5}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\estag\Desktop\conversorpdfmdgemini\validator_gemini.py", line 98, in validate_and_patch
+    response = self.model.generate_content([prompt] + sample_pages)
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\estag\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.

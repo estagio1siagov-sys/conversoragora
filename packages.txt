@@ -1,0 +1,2 @@
+libglib2.0-bin
+libgl1-mesa-dev

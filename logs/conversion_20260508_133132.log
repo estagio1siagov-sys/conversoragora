@@ -1,0 +1,7 @@
+2026-05-08 13:31:32,072 - INFO - PDFToMarkdownConverter pronto.
+2026-05-08 13:31:32,079 - INFO - Validador pronto — modelo: gemini-3.1-flash-lite-preview
+2026-05-08 13:33:13,360 - INFO - Convertendo: tmp4eqzgw6l.pdf
+2026-05-08 13:33:14,902 - INFO - HTTP Request: GET https://huggingface.co/api/models/docling-project/docling-layout-heron/revision/main "HTTP/1.1 200 OK"
+2026-05-08 13:33:15,533 - INFO - HTTP Request: GET https://huggingface.co/api/models/docling-project/docling-models/revision/v2.3.0 "HTTP/1.1 200 OK"
+2026-05-08 13:34:01,859 - INFO - Concluído: 1 pág. em 48.4s
+2026-05-08 13:43:12,682 - INFO - GeminiService pronto — modelo: gemini-3.1-flash-lite-preview
